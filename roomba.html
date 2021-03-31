@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>The Roomba Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="landing is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<h2><a href="index.html" style = "margin-left: 13px">Home Page</a> <a href="AboutMe.html" style = "margin-left: 13px">About me</a> <a href="CV.html" style = "margin-left: 13px">my CV</a></h2>
+				</header>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2 style="color:white;">The Roomba Project<br />
+								Demonstrating my expertise in writing custom software <br />
+								for the iRobot's robotic platform
+							<h2>
+						</div>
+						<a href="#main" class="more scrolly">Learn More</a>
+					</section>
+
+				<!-- Main -->
+					<article id="main">
+						<section class="wrapper style2">
+							<div class="inner">
+								<section>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/8FHW6IDvLA8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</div>
+									</div>
+									<h4>Project date:</h4>
+									<p>June 2018</p>
+									<h4>Project contributors:</h4>
+									<p>Group project. I was the lead project designer and team leader of the group.</p>
+                                    <h4>Project hardware:</h4>
+                                    <p align="justify">This is the project hardware diagram from our assignment report: </p>
+									<div class="row gtr-50 gtr-uniform">
+                                        <div class="col-7"><span class="image fit"><img src="images/rh.jpg" alt="" /></span></div>
+                                    </div>
+									<h4>Project Description:</h4>
+									<p align="justify">This project was an assignment for the UTS subject of 48623 Mechatronics 2. My group was tasked with using an iRobot's Roomba robot and a mechatronics kit with an MXK microprocessor in a search and rescue scenario. <br /><br />
+                                        In this scenario, we had a maze with know physical walls and starting position. There were also two virtual walls. These were devices that shine an infrared laser light that the robot could detect and upon detection our program had to not cross that light curtain. 
+                                        The position of one virtual wall was known, but the other virtual wall could have been anywhere. There were two victims. These were devices that the robot could detect if it came close to them. <br /><br />
+                                        Our task was to search the maze autonomously and find the two victims that could be anywhere in the maze. Upon detection of a victim, our robot had to play a song. Once both victims were detected, our robot had to navigate to the starting position and 
+                                        play a different song all without colliding with the physical or virtual walls.<br /><br />
+                                        The entire project code was implemented in C.<br /><br />
+                                        The above video is in real-time and has not sped up. It shows the actual run of our robot in the demonstration day. <br /><br />
+                                        Our approach was to place an IR distance sensor on top of a stepper motor. The sensor was facing the wall and constantly making measurements. Then we used these distance measurements to make a PID controller to keep the same distance from the walls. The stepper motor could turn the IR sensor to face the left or the right wall. By 
+                                        following the walls and keeping the same distance, we could navigate the maze and don't hit the walls. <br /><br />
+                                        The following video is also in real-time as has not sped up. It shows the view from a camera mounted on the robot as it makes its run on the demonstration day: <br /><br />
+									</p>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/NBj4u2UXd8Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</div>
+									</div>
+									<p align="justify">Here is a picture of me and my team members after successfully finishing the challenge on the demonstration day:</p>
+									<div class="row gtr-50 gtr-uniform">
+                                        <div class="col-7"><span class="image fit"><img src="images/pic.jpg" alt="" /></span></div>
+                                    </div>
+								</section>
+
+							</div>
+							
+						</section>
+						
+					</article>
+				</div>
+				<!-- Linkedin Badge -->	
+				<section id="cta" class="wrapper style3">
+					<div class="inner">
+						<a href="http://www.linkedin.com/in/habib-aghasafari"><span class="image left"><img src="images/in.png" alt="" />My Linkedin account</a>
+					</div>
+				</section>
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Habib Aghasafari</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+			
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Remote Access Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="landing is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<h2><a href="index.html" style = "margin-left: 13px">Home Page</a> <a href="AboutMe.html" style = "margin-left: 13px">About me</a> <a href="CV.html" style = "margin-left: 13px">my CV</a></h2>
+				</header>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2 style="color:white;">Remote Access Project<br />
+								Demonstrating my expertise in writing custom software <br />
+								for the Universal Robots platform
+							<h2>
+						</div>
+						<a href="#main" class="more scrolly">Learn More</a>
+					</section>
+
+				<!-- Main -->
+					<article id="main">
+						<section class="wrapper style2">
+							<div class="inner">
+
+								<section>
+									<h3>Full video of the project:</h3>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/wLRwKSfslP8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</div>
+									</div>
+									<h4>Project date:</h4>
+									<p>July 2019</p>
+									<h4>Project contributors:</h4>
+									<p>I am the sole project designer</p>
+									<h4>Project hardware:</h4>
+									<p align="justify"> I used a UR3 robot, a raspberry pi 3, a claw gripper with servo motor, two USB webcam and two laptops running Linux.</p>
+									<h4>Project Description</h4>
+									<p align="justify">The goal of this project is to pick up an apple remotely over the internet. <br /><br />
+                                        One laptop is connected to the robot and a raspberry pi and gripper and two webcams. One webcam is fitted inside the gripper, and the other webcam is attached to the base of the robot. All systems communicate using 
+                                        the Robot Operating System or ROS. This laptop is also connected to the internet. <br /><br />
+                                        The operator laptop is in another part of the UTS campus. But it could have been anywhere in the world with an internet connection. It uses Skype and Facebook messenger for video conferencing with the two webcams attached to the 
+                                        robot. It is also connected to the main program running on the laptop near the robot. <br /><br />
+                                        The operator has eight keyboard commands. These are forward, backward, left, right, up, down, open-gripper and close-gripper. Each linear command will move the end effector of the robot by half a centimetre. Each gripper command 
+                                        will rotate the fingers of gripper by 15 degrees. The commands will be sent in a string of varying size. Therefore, the operator can input any configurations of command before hitting the enter key for sending.  <br /><br />
+                                        For example, the operator can press three left key, four down key and one forward key and
+                                        then press enter. The program on the other laptop will execute each command in the same order. It calculates the required joint angles to move the end effector of the robot to the point that is 1.5 centimetres to the left, 2 centimetres 
+                                        down and 0.5 centimetres forward of the current point. In other words, it calculates the effects of each command in order and add them up and then calculates the joint angles to reach the final point in one single move. It then 
+                                        sends these joint angles to the robot to execute. <br /><br />
+                                        Also, at each step of adding commands, it checks for self-crash or crash to the ground. If it sees a crash due to a given command, it will only execute the commands that came before that command 
+                                        and ignores any command after that. If the command that causes the crash is the first command in the string, then no movement will be executed. This is to make sure the operator cannot crash the robot even if he/she tries. <br /><br />
+                                        It will do the same for the gripper. It will calculate what the angle of gripper should be based on the string of input commands and then send the results to the raspberry pi to execute. Of course, 
+										it will not allow the gripper to be closed or opened more than it can even if the operator commands it.<br /><br />
+										The Raspberry pi node is implemented in C, collision avoidance and kinematics algorithms are implemented in one node in MATLAB, and these nodes communicate with each other and the UR3 robot using the Robot Operating System or ROS.<br /><br />
+                                        The above video isn't in real-time and has sped up.<br /><br />
+                                        You see that the apple falls in the first try. This is because the gripper used here is a cheap and low-quality part. It sometimes cannot hold the weight of the apple even though it's fully closed.<br /><br />
+									</p>
+								</section>
+
+							</div>
+							
+						</section>
+						
+					</article>
+				</div>
+				<!-- Linkedin Badge -->	
+				<section id="cta" class="wrapper style3">
+					<div class="inner">
+						<a href="http://www.linkedin.com/in/habib-aghasafari"><span class="image left"><img src="images/in.png" alt="" />My Linkedin account</a>
+					</div>
+				</section>
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Habib Aghasafari</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

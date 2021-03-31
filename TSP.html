@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Turtlebot SLAM Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="landing is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<h2><a href="index.html" style = "margin-left: 13px">Home Page</a> <a href="AboutMe.html" style = "margin-left: 13px">About me</a> <a href="CV.html" style = "margin-left: 13px">my CV</a></h2>
+				</header>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2 style="color:white;">Turtlebot SLAM Project<br />
+								Demonstrating my expertise in writing custom advanced <br />
+								navigational software for the Turtlebot platform
+							<h2>
+						</div>
+						<a href="#main" class="more scrolly">Learn More</a>
+					</section>
+
+				<!-- Main -->
+					<article id="main">
+						<section class="wrapper style2">
+							<div class="inner">
+
+								<section>
+									<h4>Project date:</h4>
+									<p>October 2019</p>
+									<h4>Project contributors:</h4>
+									<p>Group project. I was the lead project designer and team leader of the group.</p>
+									<h4>Project hardware:</h4>
+									<p align="justify"> I used a Turtlebot robot and a laptop running Linux.</p>
+									<h4>Project Description:</h4>
+									<p align="justify">The robot will be placed somewhere in a known maze. It needs to first localise itself and then autonomously search the maze for a red brick. Once it found the red brick, it must drive toward the red brick. <br /><br />
+                                        The first step is to map the maze using the Turtlebot's laser scanner. I used a mapping program called G-mapping. This is a form of Simultaneous Localisation And Mapping or SLAM. I first manually drive the robot very slowly around the maze. 
+                                        The robot is constantly recording values from its laser scanner. This information will be processed to form a unified map of the maze which then will be stored in my laptop's hard drive.<br /><br />
+                                        Then, next time that we put the robot anywhere in the maze, it will then load up this stored map and then rotates a few times and makes new lear scan measurements and compares these new measurements with the stored map. This way, it 
+                                        can localise itself and know where in the maze it is. <br /><br />
+                                        Finally, the robot can begin its autonomous search for the red brick. My chosen search algorithm was to divide the whole maze into a number of separate squares and then search each square until the red break is found. The search algorithm will 
+                                        use the onboard RGB camera to constantly take pictures and uses computer vision to look for the red brick in those. At the same time, the localisation algorithm uses odometry and laser scanner data to continuously adjust the location of the robot on the map. 
+                                        This is because the odometry data is not very accurate. If you localise once in the beginning and only rely on the robot's odometry to update your current position, after a while, your assumed position will drift from the actual position of the robot 
+                                        in the maze. <br /><br />
+                                        This project is entirely implemented in a single node in my laptop using C++. This node communicates with the Turtlebot robot using the Robot Operating System or ROS.<br /><br />
+                                        The following video is in real-time and has not sped up. It shows an example of conducting G-mapping on a real maze with the real Turtlebot. I use a wireless keyboard to manually drive the robot around the maze, and you can see in the computer screen 
+                                        that the maze map is slowly being built.<br /><br />
+                                    </p>
+                                    <div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/6fu5cndP-8A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</div>
+                                    </div>
+                                    <p align="justify"> The following video is also in real-time and has not sped up. It shows an example of initial localisation and then searching a maze environment in Gazeebo simulation. In the beginning, the robot has a few possibilities of where on the map it is. But 
+                                        after a few turns and continuous laser data measurements and processing, it finds its true position in the map. Then it starts the autonomous search of the maze until it finds the red break and then drives towards it.
+                                    </p>
+                                    <div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/6eVIcesBUls" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</div>
+                                    </div>
+								</section>
+
+							</div>
+							
+						</section>
+						
+					</article>
+				</div>
+				<!-- Linkedin Badge -->	
+				<section id="cta" class="wrapper style3">
+					<div class="inner">
+						<a href="http://www.linkedin.com/in/habib-aghasafari"><span class="image left"><img src="images/in.png" alt="" />My Linkedin account</a>
+					</div>
+				</section>
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Habib Aghasafari</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
